@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 /**
  *  Representa una fecha 
+ *  @author Lander Amador Rodriguez
  */
 public class Fecha
 {

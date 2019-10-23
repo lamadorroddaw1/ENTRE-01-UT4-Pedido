@@ -1,7 +1,7 @@
 
-
 /**
  *  Representa a un cliente que hace un pedido 
+ *  @author Lander Amador Rodriguez
  */
 public class Cliente
 {
@@ -52,10 +52,14 @@ public class Cliente
      * representación textual del cliente
      */
     public String toString() {
-         
-          
+        String toString = "";        
+        System.out.printf("%10s %-10s\n", "Nombre: ", this.getNombre()); 
+        System.out.printf("%10s %-10s\n", "Direccion: ", this.getDireccion());
+        System.out.printf("%10s %-10s\n", "Ciudad: ", this.getCiudad());
+        System.out.printf("%10s %-10s", "Provincia: ", this.getProvincia());
+        return toString;
     }
-    
+
     /**
      * 
      */
