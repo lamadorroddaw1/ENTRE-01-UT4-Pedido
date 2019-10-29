@@ -14,8 +14,8 @@ public class LineaPedido
      * Constructor  
      */
     public LineaPedido(Producto producto, int cantidad)    {
-        producto = this.producto;
-        cantidad = this.cantidad;
+        this.producto = producto;
+        this.cantidad = cantidad;
     }
 
     /**
@@ -47,7 +47,7 @@ public class LineaPedido
      */
     public String toString() {
         String toString ="";
-        System.out.printf("% 10 %-10s","cantidad: " + cantidad);
+        System.out.printf("%4s",  cantidad + " unidades");
         return toString;
     }
 }

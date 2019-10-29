@@ -1,5 +1,4 @@
 
-
 /**
  * Modela un pedido realizado por un cliente en una determinada fecha
  * El pedido incluye dos líneas de pedido que describen a cada uno de los dos
@@ -19,27 +18,26 @@ public class Pedido
      */
     public Pedido(Fecha fecha,Cliente cliente,LineaPedido linea1,
     LineaPedido linea2){
-         fecha = this.fecha;
-        cliente = this.cliente;
-        linea1 = this.linea1;
-        linea2 = this.linea2;
+        this.fecha = fecha;
+        this.cliente = cliente;
+        this.linea1 = linea1;
+        this.linea2 = linea2;
     }
 
     /**
      * accesor para la fecha del pedido
      */
     public Fecha getFecha() {
-         return fecha;
+        return fecha;
     }
 
     /**
      * accesor para el cliente
      */
     public Cliente  getCliente() {
-         return cliente;
+        return cliente;
     }
-    
-    
+
     /**
      * calcular y devolver el importe total del pedido sin Iva
      */
@@ -53,7 +51,7 @@ public class Pedido
      * calcular y devolver el iva a aplicar
      */
     public double  getIva() {
-         double importe = 0;
+        double importe = 0;
         importe = producto.getPrecio() * IVA;
         return importe;
     }
@@ -62,7 +60,7 @@ public class Pedido
      * calcular y devolver el importe total del pedido con Iva
      */
     public double  getImporteTotal() {
-         double importe = 0;
+        double importe = 0;
         importe = linea1.getCantidad() * producto.getPrecio() * IVA;
         return importe;
     }
@@ -80,17 +78,18 @@ public class Pedido
         System.out.println(linea2.toString());
         return toString;
     }
-    
-    
+
+    // /**
+    // * devuelve true si el pedido actual es más antiguo que el recibido 
+    // * como parámetro
+    // */
+    // public boolean masAntiguoQue(Pedido otro) {
+    // if(){
+    // return true; 
+    // }
+    // }
+
     /**
-     * devuelve true si el pedido actual es más antiguo que el recibido 
-     * como parámetro
-     */
-    public boolean masAntiguoQue(Pedido otro) {
-         
-    }
-    
-     /**
      * devuelve una referencia al pedido actual
      */
     public  String  getPedidoActual() {

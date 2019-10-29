@@ -44,9 +44,9 @@ public class Producto
      * (ver enunciado)
      */
     public String toString() {
-        String toString ="";
-        System.out.printf("%10s %8.2s", "Nombre: ", this.getNombre()); 
-        System.out.printf("%30s %8.2f", "Precio: ", this.getPrecio());
+        String toString = "";
+        System.out.printf("%30s", this.getNombre()); 
+        System.out.printf("%8.2f", this.getPrecio());  
         return toString;
     }
 

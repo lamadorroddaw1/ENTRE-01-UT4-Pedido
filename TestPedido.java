@@ -12,14 +12,14 @@ public class TestPedido
      * Constructor  
      */
     public TestPedido()    {
+        String pedido1 = "";
+        String pedido2 = "";
         // crear pedido1
-       
-	   
-	   
-	   
+        System.out.println(pedido1.toString());
+        
 
         // crear pedido2
-         
+         pedido2.toString();
 
     }
 
