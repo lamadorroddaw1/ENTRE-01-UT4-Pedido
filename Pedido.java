@@ -80,20 +80,19 @@ public class Pedido
     }
 
     // /**
-    // * devuelve true si el pedido actual es más antiguo que el recibido 
-    // * como parámetro
-    // */
+     // * devuelve true si el pedido actual es más antiguo que el recibido 
+     // * como parámetro
+     // */
     // public boolean masAntiguoQue(Pedido otro) {
-    // if(){
-    // return true; 
-    // }
+      // fecha.antesQue(fecha) <= fecha.equals(linea1);              
+      // return true;
     // }
 
     /**
      * devuelve una referencia al pedido actual
      */
     public  String  getPedidoActual() {
-        return toString();
+        return producto.getNombre();
     }
 
 }
