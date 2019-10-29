@@ -13,48 +13,58 @@ public class Pedido
     private Cliente cliente;
     private LineaPedido linea1;
     private LineaPedido linea2;
-
+    private Producto producto;
     /**
      * Constructor  
      */
-    public Pedido()    {
-         
+    public Pedido(Fecha fecha,Cliente cliente,LineaPedido linea1,
+    LineaPedido linea2){
+         fecha = this.fecha;
+        cliente = this.cliente;
+        linea1 = this.linea1;
+        linea2 = this.linea2;
     }
 
     /**
      * accesor para la fecha del pedido
      */
-    public   getFecha() {
-         
+    public Fecha getFecha() {
+         return fecha;
     }
 
     /**
      * accesor para el cliente
      */
-    public   getCliente() {
-         
+    public Cliente  getCliente() {
+         return cliente;
     }
     
     
     /**
      * calcular y devolver el importe total del pedido sin Iva
      */
-    public   getImporteAntesIva() {
-         
+    public  double getImporteAntesIva() {
+        double importe = 0;
+        importe = linea1.getCantidad() * producto.getPrecio();
+        return importe;  
     }
 
     /**
      * calcular y devolver el iva a aplicar
      */
-    public   getIva() {
-         
+    public double  getIva() {
+         double importe = 0;
+        importe = producto.getPrecio() * IVA;
+        return importe;
     }
 
     /**
      * calcular y devolver el importe total del pedido con Iva
      */
-    public   getImporteTotal() {
-         
+    public double  getImporteTotal() {
+         double importe = 0;
+        importe = linea1.getCantidad() * producto.getPrecio() * IVA;
+        return importe;
     }
 
     /**
@@ -62,7 +72,13 @@ public class Pedido
      * (ver enunciado)
      */
     public String toString() {
-        
+        String toString = "";
+        System.out.println(fecha.toString());
+        System.out.println(cliente.toString());
+        System.out.println(producto.toString());        
+        System.out.println(linea1.toString());
+        System.out.println(linea2.toString());
+        return toString;
     }
     
     
@@ -77,8 +93,8 @@ public class Pedido
      /**
      * devuelve una referencia al pedido actual
      */
-    public    getPedidoActual() {
-        
+    public  String  getPedidoActual() {
+        return toString();
     }
 
 }
