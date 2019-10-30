@@ -70,23 +70,22 @@ public class Pedido
      * (ver enunciado)
      */
     public String toString() {
-        String toString = "";
-        System.out.println(fecha.toString());
-        System.out.println(cliente.toString());
-        System.out.println(producto.toString());        
-        System.out.println(linea1.toString());
-        System.out.println(linea2.toString());
+        String toString = String.format(getFecha() +  "\nDATOS DEL CLIENTE" +  "\n" 
+        + getCliente() + "\n****** Articulos en el pedido *******" + "\n"
+        + getPedidoActual() + "\n***** A pagar *****" + "\n" + 
+        "IMPORTE SIN IVA: " + getImporteAntesIva() + "\n" +
+        "IVA: "+  getIva() + "\n" + 
+        "IMPORTE TOTAL: " + getImporteTotal()) + "\n";        
         return toString;
     }
 
-    // /**
-     // * devuelve true si el pedido actual es más antiguo que el recibido 
-     // * como parámetro
-     // */
-    // public boolean masAntiguoQue(Pedido otro) {
-      // fecha.antesQue(fecha) <= fecha.equals(linea1);              
-      // return true;
-    // }
+    /**
+     * devuelve true si el pedido actual es más antiguo que el recibido 
+     * como parámetro
+     */
+     public boolean masAntiguoQue(Pedido otro) {        
+        return fecha.antesQue(otro.getFecha());
+    }
 
     /**
      * devuelve una referencia al pedido actual

@@ -36,8 +36,7 @@ public class LineaPedido
      * obtiene una nueva línea de pedido copia idéntica de la actual
      */
     public String obtenerCopia() {
-        String copia = "";
-        copia = producto.obtenerCopia();
+        String copia = producto.obtenerCopia();
         return copia;
     }
 
@@ -46,8 +45,7 @@ public class LineaPedido
      * (ver enunciado)
      */
     public String toString() {
-        String toString ="";
-        System.out.printf("%4s",  cantidad + " unidades");
-        return toString;
+        String unidades = String.format("%4s", cantidad + " unidades");  
+        return unidades;
     }
 }

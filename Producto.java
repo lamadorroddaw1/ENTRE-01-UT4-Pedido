@@ -34,8 +34,7 @@ public class Producto
      * obtiene un nuevo producto copia idéntica del actual
      */
     public String obtenerCopia() {
-        String copia =""; 
-        copia = this.getNombre();
+        String copia = this.getNombre();
         return copia;
     }
 
@@ -44,10 +43,8 @@ public class Producto
      * (ver enunciado)
      */
     public String toString() {
-        String toString = "";
-        System.out.printf("%30s", this.getNombre()); 
-        System.out.printf("%8.2f", this.getPrecio());  
-        return toString;
+        String lineaProducto = String.format("%30s%8.2f", nombre, precio);  
+        return lineaProducto;
     }
 
 }
