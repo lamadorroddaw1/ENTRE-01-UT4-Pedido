@@ -1,7 +1,7 @@
 
 /**
  *  Clase para probar el resto de clases
- *  
+ *  @author Lander Amador Rodriguez
  */
 public class TestPedido
 {
