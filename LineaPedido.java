@@ -45,7 +45,7 @@ public class LineaPedido
      * (ver enunciado)
      */
     public String toString() {
-        String unidades = String.format("%4s", cantidad + " unidades");  
+        String unidades = String.format(producto.toString() + " |" + "%4s" + " unidades" , cantidad);  
         return unidades;
     }
 }

@@ -43,7 +43,7 @@ public class Producto
      * (ver enunciado)
      */
     public String toString() {
-        String lineaProducto = String.format("%30s%8.2f", nombre, precio);  
+        String lineaProducto = String.format("%30s | %8.2f€ unidad", nombre, precio);  
         return lineaProducto;
     }
 

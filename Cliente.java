@@ -52,11 +52,10 @@ public class Cliente
      * representación textual del cliente
      */
     public String toString() {
-        String toString = "";        
-        System.out.printf("%10s %-10s\n", "Nombre: ", this.getNombre()); 
-        System.out.printf("%10s %-10s\n", "Direccion: ", this.getDireccion());
-        System.out.printf("%10s %-10s\n", "Ciudad: ", this.getCiudad());
-        System.out.printf("%10s %-10s", "Provincia: ", this.getProvincia());
+        String toString =        
+        String.format("%10s %-10s\n %10s %-10s\n %10s %-10s\n %10s %-10s","Nombre: ",this.getNombre()
+        ,"Direccion: ", this.getDireccion(),"Ciudad: ", this.getCiudad(),"Provincia: ", this.getProvincia() ); 
+
         return toString;
     }
 
